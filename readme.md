@@ -10,6 +10,16 @@ A JavaScript bundler with [svelte](https://svelte.dev/) is set up
 
 Continuous deployment is setup via Github Actions. The continuous deployement builds with `npm run build` then does a `git push origin online`, then triggers a github page build of the `online` branch
 
+## Local dev
+
+```sh
+npm install
+bundle install
+
+bundle exec jekyll serve
+
+npm run dev
+```
 
 
 ## Licence
