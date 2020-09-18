@@ -4,10 +4,6 @@ scripts:
       defer: true
 ---
 
-# Test page
-
-Something should be written here:
+# Zoom poll UI
 
 <section class="svelte-main"></section>
-
-Did it work?

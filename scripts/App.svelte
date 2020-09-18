@@ -1,8 +1,18 @@
 <script>
 	export let name;
+
+	import QuestionAnswerStats from './QuestionAnswerStats.svelte';
+
+	$: answerStats = new Map([
+		['A', 5],
+		['B', 2],
+		['C', 7],
+		['D, la réponse D', 9],
+	])
 </script>
 
 <h2>Hello {name}!</h2>
+<QuestionAnswerStats question="Yo ?" answersCount="12" answerStats={answerStats}/>
 
 <style>
 	main {
