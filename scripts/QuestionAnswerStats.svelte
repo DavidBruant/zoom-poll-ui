@@ -5,7 +5,7 @@
     
     $: sortedAnswerStats =[...answerStats]
         .sort(([_, count1], [__, count2]) => count2 - count1)
-        .map(([answer, count]) => ({answer, count, items: Array(count).fill('🐳')}))
+        .map(([answer, count]) => ({answer, count, items: Array(count).fill('🦊')}))
 </script>
 
 <section class="question-answer-stats">
