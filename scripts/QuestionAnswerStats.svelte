@@ -5,15 +5,16 @@
     
     $: sortedAnswerStats =[...answerStats]
         .sort(([_, count1], [__, count2]) => count2 - count1)
-        .map(([answer, count]) => ({answer, count}))
+        .map(([answer, count]) => ({answer, count, items: Array(count).fill('🐳')}))
 </script>
 
 <section class="question-answer-stats">
     <h1>{question} ({answersCount} réponses)</h1>
     <ul>
-        {#each sortedAnswerStats as {answer, count}}
+        {#each sortedAnswerStats as {answer, count, items}}
         <li>
             <span class="count">{count}/{answersCount}</span>
+            {#each items as i}{i}{/each}
             <span class="answer">{answer}</span>
         </li>
         {/each}
@@ -40,6 +41,11 @@
         font-weight: bold;
         text-align: center;
     }
+
+    .question-answer-stats li .answer{
+        margin-left: 0.5em;
+    }
     
+
 </style>
 
