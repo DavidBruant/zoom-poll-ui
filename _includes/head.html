@@ -147,15 +147,17 @@ scripts:
       crossorigin: "anonymous"
     - src: "./script2.js"
       defer: true
+      type: "module"
 ---
 
 {% endcomment %}
 
     {%- if page.scripts -%} {%- for script in page.scripts -%}
     <script src="{{ script.src }}" 
+        {% if script.type %} type="{{script.type}}" {% endif %}
         {% if script.defer %} defer {% endif %}
         {% if script.async %} async {% endif %}
-        crossorigin="{% if script.crossorigin %}script.crossorigin{% else %}anonymous{% endif %}"></script>
+        crossorigin="{% if script.crossorigin %}{{script.crossorigin}}{% else %}anonymous{% endif %}"></script>
     {%- endfor -%} {%- endif -%}
 
 </head>
