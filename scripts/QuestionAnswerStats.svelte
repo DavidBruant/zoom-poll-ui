@@ -13,9 +13,9 @@
     <ul>
         {#each sortedAnswerStats as {answer, count, items}}
         <li>
+            <span class="answer">{answer}</span>
             <span class="count">{count}/{answersCount}</span>
             {#each items as i}{i}{/each}
-            <span class="answer">{answer}</span>
         </li>
         {/each}
     </ul>
@@ -30,11 +30,6 @@
         font-size: 1.2rem;
     }
 
-    .question-answer-stats li{
-        display: flex;
-        flex-direction: row;
-    }
-
     .question-answer-stats li .count{
         display: inline-block;
         width: 4em;
@@ -43,7 +38,7 @@
     }
 
     .question-answer-stats li .answer{
-        margin-left: 0.5em;
+        display: block;
     }
     
 
