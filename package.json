@@ -16,5 +16,8 @@
     "serve": "^11.3.2",
     "svelte": "^3.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "d3-dsv": "^2.0.0",
+    "svelte-file-dropzone": "0.0.10"
+  }
 }

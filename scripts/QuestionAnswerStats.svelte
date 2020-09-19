@@ -18,10 +18,12 @@
         </li>
         {/each}
     </ul>
-
 </section>
 
 <style>
+    .question-answer-stats h1{
+        font-size: 1.2rem;
+    }
     
 </style>
 
