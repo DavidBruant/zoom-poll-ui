@@ -111,8 +111,29 @@
             padding: 0 calc( max(5px, ( 100vw - 50em ) / 2 ));
         }
 
-    </style>
+        @media (min-width: 640px) {
+            main {
+                max-width: none;
+            }
+        }
 
+    </style>
+    
+{% comment %} 
+Styles are added based on the page.styles variable
+This variable is defined in front-matter with:
+
+---
+styles:
+    - src: "./yo.css"
+    - src: "./font-maybe.css"
+---
+
+{% endcomment %}
+
+    {%- if page.styles -%} {%- for style in page.styles -%}
+    <link crossorigin="anonymous" rel="stylesheet" href="{{ style.href }}">
+    {%- endfor -%} {%- endif -%}
 
 {% comment %} 
 Scripts are added based on the page.scripts variable
