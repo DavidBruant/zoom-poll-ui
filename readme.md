@@ -1,14 +1,14 @@
-# Front-end template
+# Zoom poll UI
 
-This repo is meant to be a template repo. Not useful in itself, but a starter kit for other projects
+[Zoom](https://zoom.us/) provide a polling feature
 
-This repo is based on [Jekyll](jekyllrb.com/), so content can be written in markdown or HTML
+You can view poll results live.\
+and also download the results afterward as a csv file
 
-A simple theme is already set up
+You can drop your file here and it visualises the results:
+https://davidbruant.github.io/zoom-poll-ui/
 
-A JavaScript bundler with [svelte](https://svelte.dev/) is set up
 
-Continuous deployment is setup via Github Actions. The continuous deployement builds with `npm run build` then does a `git push origin online`, then triggers a github page build of the `online` branch
 
 ## Local dev
 
@@ -21,10 +21,18 @@ bundle exec jekyll serve
 npm run dev
 ```
 
+## Expectations and licence
 
-## Licence
+### Expectations
+
+I expect to be credited for the work on this repo
+
+### Licence 
 
 Everything written by contributors to this repo is under **CC0 1.0 (Public Domain)**
+
+
+#### Dependencies
 
 Bootstrap reboot is **MIT**-licenced
 Svelte and rollup config are **MIT**-licence

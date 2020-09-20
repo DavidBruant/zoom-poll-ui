@@ -10,6 +10,7 @@
 
 <section class="question-answer-stats">
     <h1>{question} ({answersCount} réponses)</h1>
+    {#if sortedAnswerStats.length >= 1}
     <ul>
         {#each sortedAnswerStats as {answer, count, items}}
         <li>
@@ -19,6 +20,10 @@
         </li>
         {/each}
     </ul>
+    {:else}
+    No data. Maybe try uploading the <a href="./data/fake-zoom-poll-file.csv">test file</a>
+    {/if}
+    
 </section>
 
 <style>
