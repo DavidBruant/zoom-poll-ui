@@ -54,9 +54,14 @@
 
 </script>
 
+
 <Dropzone on:drop={onFile} />
 
-{#each questionsAnswersStats as {question, answersCount, answerStats} }
-<QuestionAnswerStats question={question} answersCount={answersCount} answerStats={answerStats}/>
-{/each}
+{#if questionsAnswersStats.length >= 1}
+	{#each questionsAnswersStats as {question, answersCount, answerStats} }
+	<QuestionAnswerStats question={question} answersCount={answersCount} answerStats={answerStats}/>
+	{/each}
+{:else}
+	<p>No data. Maybe try uploading the <a href="./data/fake-zoom-poll-file.csv">test file</a></p>
+{/if}
 
